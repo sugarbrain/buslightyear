@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.5.3",
+    "mongoose": "^5.5.9",
     "nodemon": "^1.19.0"
   }
 }

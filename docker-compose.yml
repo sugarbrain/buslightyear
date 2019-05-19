@@ -1,15 +1,13 @@
 version: "3"
 
 services:
-  mongo-seed:
-    build: ./mongo-seed
 
   mongodb:
     image: mongo
     ports:
       - "27017:27017"
-    depends_on:
-      - mongo-seed
+    networks:
+      - app-network
   
   rabbit:
     image: rabbitmq:3-management
@@ -26,6 +24,7 @@ services:
     volumes:
       - ./producer:/app
     depends_on:
+      - mongodb
       - rabbit
 
   consumer:
