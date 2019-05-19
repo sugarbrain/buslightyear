@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  rabbit:
+    image: rabbitmq:3-management
+    networks:
+      - app-network
+ 
+  producer:
+    build: ./producer
+    command: npm start
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    volumes:
+      - ./producer:/app
+    depends_on:
+      - rabbit
+
+  consumer:
+    build: ./consumer
+    command: npm start
+    ports:
+      - "6000:6000"
+    networks:
+      - app-network
+    volumes:
+      - ./consumer:/app
+    depends_on:
+      - rabbit
+      - producer
+
+networks:
+  app-network:
+    driver: bridge
