@@ -62,7 +62,7 @@ async function main() {
           }          
         });
         console.log(`[x] Sent bus ping!`);
-      }, 10000);
+      }, 60000);
     });
   });
 }

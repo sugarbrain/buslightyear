@@ -1,6 +1,6 @@
 # stage 1
 FROM mongo as seed
-WORKDIR /app
+WORKDIR /
 COPY data/200118_240118.csv data.csv
 CMD mongoimport --host mongodb --db buslightyear --collection bus_ping --type csv --headerline --file data.csv
 

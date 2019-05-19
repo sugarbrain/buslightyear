@@ -1,0 +1,3 @@
+<input #selectBus type="text" placeholder="Insira o ônibus..."
+  (keyup.enter)="selectedBus=selectBus.value; selectBus.value=''">
+<p>{{ selectedBus }}</p>
