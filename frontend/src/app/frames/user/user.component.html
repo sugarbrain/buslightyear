@@ -1,2 +1,15 @@
-<!--<app-map></app-map>-->
+<app-map></app-map>
 <app-control-panel></app-control-panel>
+<script language="javascript">
+    var connection = new WebSocket('ws://0.0.0.0:3005/bus_ping');
+
+    connection.onopen = function () {
+        console.log('Connection open!');
+    }
+    connection.onmessage = function (e) {
+        var server_message = e.data;
+        console.log(server_message);
+        document.getElementById("result").innerHTML += server_message + "<br>";
+    }
+</script>
+<div id="result"></div>

@@ -28,7 +28,7 @@ import { SupervisorComponent } from './frames/supervisor/supervisor.component';
     ClarityModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAEaJt6IEdsyHLkwhDHqKHTpI5Wb8oZj1M'
+      apiKey: 'AIzaSyBGMKA20_qmOntA1yz3tJHb8VQNan3h8Zw'
     })
   ],
   providers: [],
