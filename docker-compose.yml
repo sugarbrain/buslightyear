@@ -8,7 +8,17 @@ services:
       - "27017:27017"
     networks:
       - app-network
-  
+    logging:
+      driver: none
+
+  mongo-seed:
+    build: ./mongo-seed
+    command: mongoimport --host mongodb --db buslightyear --collection bus_ping --type csv --headerline --file data.csv
+    networks:
+      - app-network
+    depends_on:
+      - mongodb
+ 
   rabbit:
     image: rabbitmq:3-management
     networks:
@@ -24,14 +34,13 @@ services:
     volumes:
       - ./producer:/app
     depends_on:
-      - mongodb
       - rabbit
 
   consumer:
     build: ./consumer
     command: npm start
     ports:
-      - "6000:6000"
+      - "3005:3005"
     networks:
       - app-network
     volumes:
@@ -42,9 +51,13 @@ services:
 
   frontend:
     build: ./frontend
-    command: ng serve --host 0.0.0.0
+    command: npm start
     ports:
-      - "4200:4200"
+      - "8000:8000"
+    networks:
+      - app-network
+    volumes:
+      - ./frontend:/app
     depends_on:
       - consumer
 

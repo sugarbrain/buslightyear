@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Buslightyear</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" />
+            <h1><span style="color:#e93972ff">Bus</span>lightyear</h1>
+        </div>
+    </header>
+    <section>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <div class="sidebar">
+            <div class="field">
+                <h3>Número do ônibus</h3>
+                <input id="input-user-bus" type="number" placeholder="nº" />
+
+                <div id="message"></div>
+            </div>
+
+
+        </div>
+    </section>
+    <script src="./script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGMKA20_qmOntA1yz3tJHb8VQNan3h8Zw&callback=initMap"
+        async defer></script>
+
+</body>
+
+</html>
