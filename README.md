@@ -18,7 +18,7 @@ $ sudo apt-get install git
 ```
 #### Docker
 
-In order for iniatilize the code it is necessary to have installed [Docker](https://www.docker.com/) on your machine.
+In order for iniatilize the code it is necessary to have installed [docker](https://www.docker.com/) on your machine.
 
 Installing on Linux (Ubuntu):
 ```
