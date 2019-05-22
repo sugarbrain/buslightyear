@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 #### Git
 
-In order for clone the repository it is necessary to have installed [git] (https://git-scm.com/) on your machine.
+In order for clone the repository it is necessary to have installed [git](https://git-scm.com/) on your machine.
 
 Installing on Linux (Ubuntu):
 ```
@@ -18,7 +18,7 @@ $ sudo apt-get install git
 ```
 #### Docker
 
-In order for iniatilize the code it is necessary to have installed [Docker] (https://www.docker.com/) on your machine.
+In order for iniatilize the code it is necessary to have installed [Docker](https://www.docker.com/) on your machine.
 
 Installing on Linux (Ubuntu):
 ```
