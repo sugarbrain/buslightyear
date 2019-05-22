@@ -57,7 +57,7 @@ $ cd buslightyear
 $ sudo docker-compose up
 ```
 
-### Open browser
+### Results
 
 Finally, see your results just typing in your navigator the address https://localhost:8000/public/user.html or https://localhost:8000/public/supervisor.html
 
