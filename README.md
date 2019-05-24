@@ -40,7 +40,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 ### Software execution
 
-#### Clonning Buslightyear repo
+#### Cloning buslightyear repo
 
 Once you have all the prerequisites installed, let's go to the first step of all Github repository: Clone and extract the repository.
 
@@ -48,7 +48,28 @@ Once you have all the prerequisites installed, let's go to the first step of all
 $ git clone https://github.com/sugarbrain/buslightyear/
 ```
 
-#### Run docker-compose
+#### Inserting a data
+
+Once you have cloned, create a folder named data inside mongo-seed and insert a <file_name>.csv in it.
+
+```
+$ cd buslightyear/mongo-seed
+$ mkdir data
+$ cd data
+```
+
+#### Modifying Dockerfile
+
+Once you have inserted the csv file, modify the Dockerfile to access it.
+
+```
+# stage 1
+FROM mongo as seed
+WORKDIR /
+COPY data/<file_name>.csv data.csv
+```
+
+#### Building project
 
 In this step, we will run all containers declared into docker-compose to initialize the project.
 
